@@ -9,15 +9,18 @@ Then the output should be:
 1010
 
 """
-items = []
-num = [x for x in input("accepts a sequence of comma separated 4 digit binary numbers: ").split(',')]
-p = set(num)
-s = {'0', '1'}
-if s == p or p == {'0'} or p == {'1'}:
-    for n in num:
-        x = int(n, 2)
-        if not x%5:
-            items.append(n)
-            print(','.join(items))
-else :
-        print("No")
+while True:
+    try:
+        items = []
+        num = [x for x in input("accepts a sequence of comma separated 4 digit binary numbers: ").split(',')]
+        for p in num:
+            x = int(p, 2)
+            if not x%5:
+                items.append(p)
+        print(','.join(items))
+        
+        break
+# except make output for other inputs with error information and continue until getting the integer
+    except ValueError:
+        print("please input comma separated 4 digit binary numbers")
+        continue
