@@ -2,3 +2,4 @@ Hello, welcome to Python
 adding jenkinswebhook
 testing webhook for jenkins
 trigger not succeeded
+succeeded with proper git path
